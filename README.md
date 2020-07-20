@@ -1,2 +1,2 @@
 # backpropagation
-simple backpropagation
+simple backpropagation with c++
