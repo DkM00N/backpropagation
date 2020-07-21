@@ -43,6 +43,6 @@ class layer{
 	void setoutput(vector<float*>& y,layer *lw);
 	void forward();
 	void backward();
-	void update(void (*optimizer)());
+	void update();
 	~layer();
 };

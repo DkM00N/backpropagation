@@ -25,7 +25,10 @@ void neuralunit::set(int n,vector<std::shared_ptr<neuralunit>> &lay){
 
 //
 void neuralunit::forward(){
-	
+	z=0;
+	for(auto m:i_w)
+	 z+=*(m->x)*m->w;
+	o=z>0?z:0;
 };
 
 //
@@ -94,6 +97,8 @@ void layer::forward(){
 	}
 	layer* itr=this;
 	while(itr){
+		for(auto x:itr->lay)
+		 x->forward();
 		itr=itr->upper;
 	}
 };
@@ -104,7 +109,7 @@ void layer::backward(){
 };
 
 //update parameters
-void layer::update(void (*optimizer)()){
+void layer::update(){
 
 };
 

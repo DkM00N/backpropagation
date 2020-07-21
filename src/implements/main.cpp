@@ -1,5 +1,6 @@
 #include "backpropagation.h"
 int main(){
+	cout<<"running"<<endl;
 	vector<float> x(2);
 	vector<float*> y(2);
 	layer l1(3);
